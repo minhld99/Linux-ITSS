@@ -1,0 +1,90 @@
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:23:47 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:24:27 +07]
+=========================
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:35:00 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:39:30 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:40:30 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:41:14 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:41:24 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:43:09 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:43:47 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:47:29 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:53:35 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:55:17 +07]
+=========================
+
+[32mRam Usages : (B[m
+[32mSwap Usages : (B[m
+[32mDisk Usages : (B[m
+
+[Thứ ba, 15 Tháng 12 năm 2020 13:55:38 +07]
+=========================
+

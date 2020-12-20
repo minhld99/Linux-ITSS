@@ -1,0 +1,22 @@
+Internet Connectivity
+OS Type
+OS Name
+OS Version
+Architecture
+Kernel Release
+Hostname
+Internal IP
+External IP
+Name Servers
+Logged In Users
+Ram Usages
+Swap Usages
+Disk Usages
+Load Average
+System Uptime
+
+($chmod +x /home/minh/Monitor/monitor.sh)
+This script will be run after every 1 hours
+ln -s -t /etc/cron.hourly/monitor.sh /home/minh/Monitor/monitor.sh
+
+less --RAW-CONTROL-CHARS "$log_file"
