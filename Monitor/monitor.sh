@@ -1,7 +1,7 @@
 #! /bin/bash
 # unset any variable which system may be using
 
-unset main os architecture kernelrelease internalip externalip nameserver loadaverage
+unset normal os architecture kernelrelease internalip externalip nameserver loadaverage
 # clear the screen
 # clear
 
@@ -61,84 +61,86 @@ then
 {
 
 function work-list () {
+sleep 1;
+} 
+work-list | zenity --progress --title "Running..." --auto-close
 
 adddate() {
 while IFS= read -r line; do
-printf '%s\n\n[%s]
-=========================\n\n' "$line" "$(date)";
+printf '\n%s' "$line";
 done
+printf '\n\n['"$(date)"']\n=========================\n\n';
 }
 
-# Define Variable main
-main=$(tput sgr0)
+# Define Variables
+normal=$(tput sgr0)
+green=$(tput setaf 2) 	# = '\E[32m'
 
 # Check if connected to Internet or not
-ping -c 1 google.com &> /dev/null && echo -e '\E[32m'"Internet: $main Connected" || echo -e '\E[32m'"Internet: $main Disconnected"
+ping -c 1 google.com &> /dev/null && echo -e $green"Internet: $normal Connected" || echo -e $green"Internet: $normal Disconnected"
 
 # Check OS Type
 os=$(uname -o)
-echo -e '\E[32m'"Operating System Type :" $main $os
+echo -e $green"Operating System Type :" $normal $os
 
 # Check OS Release Version and Name
-cat /etc/os-release | grep 'NAME\|VERSION' | grep -v 'VERSION_ID' | grep -v 'PRETTY_NAME' > /tmp/osrelease
-echo -n -e '\E[32m'"OS Name :" $main  && cat /tmp/osrelease | grep -v "VERSION" | cut -f2 -d\"
-echo -n -e '\E[32m'"OS Version :" $main && cat /tmp/osrelease | grep -v "NAME" | cut -f2 -d\"
+cat /etc/os-release | grep 'NAME="\|VERSION="' | grep -v 'VERSION_ID' | grep -v 'PRETTY_NAME' > /tmp/osrelease
+echo -n -e $green"OS Name :" $normal  && cat /tmp/osrelease | grep -v "VERSION" | cut -f2 -d\"
+echo -n -e $green"OS Version :" $normal && cat /tmp/osrelease | grep -v "NAME" | cut -f2 -d\"
 
 # Check Architecture
 architecture=$(uname -m)
-echo -e '\E[32m'"Architecture :" $main $architecture
+echo -e $green"Architecture :" $normal $architecture
 
 # Check Kernel Release
 kernelrelease=$(uname -r)
-echo -e '\E[32m'"Kernel Release :" $main $kernelrelease
+echo -e $green"Kernel Release :" $normal $kernelrelease
 
 # Check hostname
-echo -e '\E[32m'"Hostname :" $main $HOSTNAME
+echo -e $green"Hostname :" $normal $HOSTNAME
 
 # Check Internal IP
 internalip=$(hostname -I)
-echo -e '\E[32m'"Internal IP :" $main $internalip
+echo -e $green"Internal IP :" $normal $internalip
 
 # Check External IP
 externalip=$(curl -s ipecho.net/plain;echo)
-echo -e '\E[32m'"External IP : $main "$externalip
+echo -e $green"External IP : $normal "$externalip
 
 # Check DNS
-nameservers=$(cat /etc/resolv.conf | sed '1 d' | awk '{print $2}')
-echo -e '\E[32m'"Name Servers :" $main $nameservers 
+nameservers=$(cat /etc/resolv.conf | grep -i '^nameserver' | head -n1 | cut -d ' ' -f2)
+echo -e $green"Name Servers :" $normal $nameservers 
 
 # Check Logged In Users
 who>/tmp/who
-echo -e '\E[32m'"Logged In users :" $main && cat /tmp/who 
+echo -e $green"Logged In users :" $normal && cat /tmp/who 
 
 # Check RAM and SWAP Usages
 free -h | grep -v + > /tmp/ramcache
-echo -e '\E[32m'"Ram Usages :" $main | tee -a "usages_log.txt"
-cat /tmp/ramcache | grep -v "Swap"
-echo -e '\E[32m'"Swap Usages :" $main | tee -a "usages_log.txt"
-cat /tmp/ramcache | grep -v "Mem"
+echo -e $green"Ram Usages :" $normal
+cat /tmp/ramcache | grep -v "Swap" | tee -a "usages_log.txt"
+echo -e $green"Swap Usages :" $normal
+cat /tmp/ramcache | grep -v "Mem" | tee -a "usages_log.txt"
 
 # Check Disk Usages
 df -h| grep 'Filesystem\|/dev/sda*' > /tmp/diskusage
-echo -e '\E[32m'"Disk Usages :" $main | adddate >> usages_log.txt
+echo -e $green"Disk Usages :" $normal
 cat /tmp/diskusage
+cat /tmp/diskusage | adddate >> usages_log.txt
 
 # Check Load Average
 loadaverage=$(top -n 1 -b | grep "load average:" | awk '{print $10 $11 $12}')
-echo -e '\E[32m'"Load Average :" $main $loadaverage
+echo -e $green"Load Average :" $normal $loadaverage
 
 # Check System Uptime
 tecuptime=$(uptime | awk '{print $3,$4}' | cut -f1 -d,)
-echo -e '\E[32m'"System Uptime Days/(HH:MM) :" $main $tecuptime
+echo -e $green"System Uptime Days/(HH:MM) :" $normal $tecuptime
 
 # Unset Variables
-unset main os architecture kernelrelease internalip externalip nameserver loadaverage
+unset normal os architecture kernelrelease internalip externalip nameserver loadaverage
 
 # Remove Temporary Files
 rm /tmp/osrelease /tmp/who /tmp/ramcache /tmp/diskusage
-
-}
-work-list | zenity --progress --title "Running..." --auto-close
 
 }
 fi

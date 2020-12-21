@@ -1,90 +1,36 @@
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
+              total        used        free      shared  buff/cache   available
+Mem:          1,9Gi       1,3Gi       168Mi       103Mi       492Mi       411Mi
+              total        used        free      shared  buff/cache   available
+Swap:         1,4Gi        68Mi       1,3Gi
 
-[Thứ ba, 15 Tháng 12 năm 2020 13:23:47 +07]
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda5        29G  8,4G   20G  31% /
+/dev/sda1       511M  4,0K  511M   1% /boot/efi
+
+[Thứ ba, 22 Tháng 12 năm 2020 02:02:18 +07]
 =========================
 
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
+              total        used        free      shared  buff/cache   available
+Mem:          1,9Gi       1,5Gi        68Mi       142Mi       356Mi       137Mi
+              total        used        free      shared  buff/cache   available
+Swap:         1,4Gi       223Mi       1,1Gi
 
-[Thứ ba, 15 Tháng 12 năm 2020 13:24:27 +07]
-=========================
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda5        29G  8,4G   20G  31% /
+/dev/sda1       511M  4,0K  511M   1% /boot/efi
 
-[Thứ ba, 15 Tháng 12 năm 2020 13:35:00 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:39:30 +07]
+[Thứ ba, 22 Tháng 12 năm 2020 02:09:47 +07]
 =========================
 
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
+              total        used        free      shared  buff/cache   available
+Mem:          1,9Gi       1,5Gi        89Mi       140Mi       341Mi       146Mi
+              total        used        free      shared  buff/cache   available
+Swap:         1,4Gi       242Mi       1,1Gi
 
-[Thứ ba, 15 Tháng 12 năm 2020 13:40:30 +07]
-=========================
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda5        29G  8,4G   20G  31% /
+/dev/sda1       511M  4,0K  511M   1% /boot/efi
 
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:41:14 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:41:24 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:43:09 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:43:47 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:47:29 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:53:35 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:55:17 +07]
-=========================
-
-[32mRam Usages : (B[m
-[32mSwap Usages : (B[m
-[32mDisk Usages : (B[m
-
-[Thứ ba, 15 Tháng 12 năm 2020 13:55:38 +07]
+[Thứ ba, 22 Tháng 12 năm 2020 02:09:52 +07]
 =========================
 
