@@ -15,8 +15,9 @@ Disk Usages
 Load Average
 System Uptime
 
-($chmod +x /home/minh/Monitor/monitor.sh)
+($chmod +x monitor.sh)
+
 This script will be run after every 1 hours
 ln -s -t /etc/cron.hourly/monitor.sh /home/minh/Monitor/monitor.sh
 
-less --RAW-CONTROL-CHARS "$log_file"
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1M-nh-44FTSVGLOcrPwMxMKou_UMAmpfo' -O monitor.sh

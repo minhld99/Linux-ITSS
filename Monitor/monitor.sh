@@ -5,13 +5,14 @@ unset normal os architecture kernelrelease internalip externalip nameserver load
 # clear the screen
 # clear
 
-while getopts ivhd name
+while getopts ivhde name
 do
         case $name in
           i)iopt=1;; # install
           v)vopt=1;; # version
           h)hopt=1;; # help
           d)dopt=1;; # view calendar
+          e)eopt=1;; # execute every 1 hour
           *)echo "Invalid arg";;
         esac
 done
@@ -22,6 +23,7 @@ then
 wd=$(pwd)
 basename "$(test -L "$0" && readlink "$0" || echo "$0")" > /tmp/scriptname
 scriptname=$(echo -e -n $wd/ && cat /tmp/scriptname)
+echo "Note: Use your root account password!!"
 su -c "cp $scriptname /usr/bin/monitor" root && echo "Congratulations! Script Installed" || echo "Installation failed"
 }
 fi
@@ -53,6 +55,17 @@ then
 {
 date=$(zenity --calendar)
 echo $date
+}
+fi
+
+if [[ ! -z $eopt ]]
+then
+{
+wd=$(pwd)
+basename "$(test -L "$0" && readlink "$0" || echo "$0")" > /tmp/scriptname
+scriptname=$(echo -e -n $wd/ && cat /tmp/scriptname)
+sudo mv $scriptname /etc/cron.hourly/monitor && 
+echo "Success! This script will be executed every 1 hour." || echo "Error!"
 }
 fi
 
